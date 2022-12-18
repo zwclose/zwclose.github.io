@@ -28,6 +28,7 @@ github_username:  zwclose
 
 google_analytics: UA-110790799-1
 show_excerpts: true
+excerpt_separator: <!--more-->
 
 # Build settings
 theme: minima
