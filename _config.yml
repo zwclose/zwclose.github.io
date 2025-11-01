@@ -30,6 +30,14 @@ google_analytics: UA-110790799-1
 show_excerpts: true
 excerpt_separator: <!--more-->
 
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+rouge:
+  theme: github
+
 # Build settings
 theme: minima
 plugins:

@@ -1,0 +1,163 @@
+/* ----------------------------------------------------------
+   GitHub.com–accurate syntax highlighting for Rouge output
+   Works for Jekyll fenced code blocks
+   ---------------------------------------------------------- */
+
+/* Base text + layout */
+.markdown-body pre,
+.markdown-body code,
+pre,
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+  font-size: 13px;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 6px;
+}
+
+pre {
+  padding: 16px;
+  overflow: auto;
+  border: 1px solid #d0d7de;
+  margin: 0 0 16px;
+}
+
+code {
+  padding: 0.2em 0.4em;
+}
+
+/* --- Unified background: fix double-layer color --- */
+.highlight,
+.highlight pre,
+.highlight code {
+  background-color: #f6f8fa !important;
+}
+
+/* Remove nested code background in pre blocks */
+pre code {
+  background: transparent !important;
+  padding: 0;
+}
+
+/* --- Token colors (accurate GitHub Light palette) --- */
+.highlight .c,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs {
+  color: #6e7781;
+  font-style: italic;
+}
+
+.highlight .cp { color: #6f42c1; }
+.highlight .err { color: #f85149; background: #fff0f0; }
+
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt,
+.highlight .ow {
+  color: #cf222e;
+  font-weight: normal !important;
+}
+
+.highlight .na { color: #116329; }
+.highlight .nb { color: #0550ae; }
+.highlight .bp { color: #0550ae; }
+
+.highlight .nc,
+.highlight .nf,
+.highlight .nd,
+.highlight .ne,
+.highlight .ni {
+  color: #8250df;
+}
+
+.highlight .nn,
+.highlight .no,
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi {
+  color: #24292f;
+}
+
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .il,
+.highlight .mo {
+  color: #1f2328;
+}
+
+.highlight .s,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s1,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .ss {
+  color: #0a3069;
+}
+
+.highlight .nt { color: #116329; }
+
+.highlight .gd { color: #82071e; background: #ffebe9; }
+.highlight .gi { color: #116329; background: #dafbe1; }
+
+/* Optional subtle shadow like GitHub markdown */
+.markdown-body pre {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* --- Optional: Auto dark mode --- */
+@media (prefers-color-scheme: dark) {
+  pre,
+  code,
+  .highlight,
+  .highlight pre,
+  .highlight code {
+    background-color: #161b22 !important;
+    color: #c9d1d9;
+    border-color: #30363d;
+  }
+
+  .highlight .c,
+  .highlight .cm,
+  .highlight .c1,
+  .highlight .cs { color: #8b949e; }
+
+  .highlight .k,
+  .highlight .kr,
+  .highlight .kd,
+  .highlight .kn { color: #ff7b72; }
+
+  .highlight .s,
+  .highlight .s1,
+  .highlight .s2 { color: #a5d6ff; }
+
+  .highlight .nf,
+  .highlight .nc,
+  .highlight .nd { color: #d2a8ff; }
+
+  .highlight .nt { color: #7ee787; }
+
+  .highlight .m,
+  .highlight .mf,
+  .highlight .mh,
+  .highlight .mi,
+  .highlight .il,
+  .highlight .mo { color: #79c0ff; }
+
+  .highlight .gd { color: #ffa198; background: #490202; }
+  .highlight .gi { color: #56d364; background: #002b1a; }
+}
